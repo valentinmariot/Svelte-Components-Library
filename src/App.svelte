@@ -10,9 +10,13 @@
     </a>
     <a href="https://svelte.dev" target="_blank"> 
 <<<<<<< HEAD
+<<<<<<< HEAD
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
 =======
 >>>>>>> fa3dcb5 (Add container for testing)
+=======
+      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
+>>>>>>> b3e56b0 (Restore)
     </a>
   </div>
   <h1>Vite + Svelte</h1>
