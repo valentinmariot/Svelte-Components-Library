@@ -1,8 +1,7 @@
 import './app.css'
-// import App from './App.svelte'
-import Switch from './components/Switch.svelte'
+import App from './App.svelte'
 
-const app = new Switch({
+const app = new App({
   target: document.getElementById('app')
 })
 
