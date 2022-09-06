@@ -50,6 +50,7 @@
 <style>
   .switchContainer {
     display: flex;
+    align-items: center;
   }
 
   label {
