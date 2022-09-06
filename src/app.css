@@ -16,6 +16,7 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
+<<<<<<< HEAD
   line-height: 24px;
   font-weight: 400;
 <<<<<<< HEAD
@@ -33,6 +34,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+=======
+  color: 	#000000;
+  background-color: #ffffff;
+>>>>>>> 1b6bc07 (Update)
 }
 
 <<<<<<< HEAD
@@ -50,9 +55,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 <<<<<<< HEAD
@@ -71,7 +73,6 @@ h1 {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 <<<<<<< HEAD
 
