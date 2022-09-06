@@ -9,7 +9,10 @@
       <img src="/vite.svg" class="logo" alt="Vite Logo" />
     </a>
     <a href="https://svelte.dev" target="_blank"> 
+<<<<<<< HEAD
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
+=======
+>>>>>>> fa3dcb5 (Add container for testing)
     </a>
   </div>
   <h1>Vite + Svelte</h1>
