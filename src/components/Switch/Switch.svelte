@@ -77,7 +77,6 @@
       width: 25px;
       align-items: center;
       margin-top: 3px;
-  
       margin-left: 3px;
       background-color: white;
       border-radius: inherit;
