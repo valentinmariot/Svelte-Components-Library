@@ -1,4 +1,5 @@
 <script>
+<<<<<<< HEAD
 	import PasswordChecker from "./components/PasswordChecker/Password-checker.svelte";
 	import SwitchSection from "./components/Switch/SwitchSection.svelte";
 	import ToolbarSection from "./components/Toolbar/ToolbarSection.svelte";
@@ -153,3 +154,23 @@
 		text-decoration: underline;
 	}
 </style>
+=======
+    import Slider from "./Slider/Slider.svelte" ;
+  
+</script>
+
+
+<Slider 
+defaultValue = {10}
+idInput="Lozange"
+nameInput="volume"
+forData="volume"
+
+min={0}
+max={100}
+labelText = "Monter le son"
+/>
+
+
+
+>>>>>>> 7932310 (slider with test css)
