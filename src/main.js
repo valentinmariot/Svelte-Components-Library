@@ -1,7 +1,7 @@
 import './app.css'
-import App from './App.svelte'
+import SwitchTest from './components/Switch/SwitchTest.svelte'
 
-const app = new App({
+const app = new SwitchTest({
   target: document.getElementById('app')
 })
 
