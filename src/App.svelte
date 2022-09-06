@@ -1,4 +1,5 @@
 <script>
+<<<<<<< HEAD
 	import PasswordChecker from "./components/PasswordChecker/Password-checker.svelte";
 	import SwitchSection from "./components/Switch/SwitchSection.svelte";
 	import ToolbarSection from "./components/Toolbar/ToolbarSection.svelte";
@@ -153,3 +154,19 @@
 		text-decoration: underline;
 	}
 </style>
+=======
+  import Card from './components/Card/Card.svelte'
+
+  let title ="Beyonce Knowles" ;
+  let description = "Chanteuse afro-américaine née le 04 septembre 1981, elle est l'une des artistes les plus populaires de sa génération." ;
+  let listIcons = [ "X", "O", "I"]
+</script>
+
+<Card  
+  title={title} 
+  description={description} 
+  listIcons={listIcons} 
+
+/>
+
+>>>>>>> 1b7d2be (Card with css and action)
