@@ -7,9 +7,9 @@
   export let id = 'button'
   // function to export boolean's value
   export let onToggle
-  // 
+  // allow to disable button
   export let isDisabled = false
-  //
+  // allow to change style
   export let isLocked = false
 
   const handleToggle = () => {
@@ -18,23 +18,20 @@
   }
 
   const isToggledActive = !isDisabled && !isLocked
-    
-    const setToggle = (state) => {
-      if(state){
-        console.log('is tog')
-          return 'bg-toggled'
-      } else if(!state) {
-        console.log('is untog')
-        return 'bg-untoggled'
-      }
-  }
 
   const setState = (state) => {
-    if(state && !isLocked) {
+    if(isToggledActive) {
+      if(state === true){
+          return 'bg-toggled'
+      } 
+        return 'bg-untoggled'
+      
+    } else if(isDisabled && !isLocked || isDisabled && isLocked) {
       return 'bg-disabled'
-    } else {
+
+    } else if(isLocked && !isDisabled) {
       return 'bg-locked'
-    }
+    } 
   }
   
 </script>
@@ -44,7 +41,7 @@
     <label for={id}>{label}</label>
     {/if}
 
-    <button id={id}  class={isToggledActive ? setToggle(isToggled) : setState(isDisabled)} on:click={handleToggle} disabled='{isDisabled}'>
+    <button id={id}  class={setState(isToggled ?? isDisabled)} on:click={handleToggle} disabled='{isDisabled}'>
       <div class="button-switch"  class:isToggled >
       </div>
     </button>
