@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   font-family: "Roboto", sans-serif;
@@ -6,6 +7,8 @@
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f774756 (Update)
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -67,10 +70,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b3e56b0 (Restore)
+
 button:hover {
   border-color: #646cff;
 }
@@ -92,6 +92,7 @@ button:focus-visible {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 23564ff (* Change import)
 <<<<<<< HEAD
 >>>>>>> 2baace1 (* Change import)
@@ -104,3 +105,5 @@ button:focus-visible {
 =======
 >>>>>>> b3e56b0 (Restore)
 >>>>>>> 588febd (Restore)
+=======
+>>>>>>> f774756 (Update)
