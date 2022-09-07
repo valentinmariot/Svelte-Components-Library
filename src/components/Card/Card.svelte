@@ -196,8 +196,8 @@ h4 {
 /*  -- CARD BODY */
 
 .card-body {
-  height: 340px;
-  background-color: #F582AE;
+  height: 100%;
+  /* background-color: #F582AE; */
 
 }
 
@@ -224,21 +224,21 @@ h4 {
 
 
 .icons-area {
-  background-color: #F582AE;
-  float: right;
-  margin-right: 5px;
+  /* background-color: #F582AE; */
 
 
 }
 
 .icons-area ul {
-  background-color: #bf0b50;
-  margin-right: 5px;
+  /* background-color: #bf0b50; */
+  width: 100%;
   list-style-type: none;
   list-style: none;
   padding: 0;
   margin: 0;
-  display: block;
+  display: inline-flex  ;
+  flex-direction: row;
+  justify-content: flex-end;
 
 }
 
@@ -246,6 +246,7 @@ h4 {
   display: inline-block;
   width: 20px;
   height: 20px;
+  margin: 6px;
   background-color: darkturquoise;
 }
 

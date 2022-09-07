@@ -168,7 +168,6 @@
   shortDescription={shortDescription}
   longDescription={longDescription}  
   listIcons={listIcons} 
-
 />
 
 >>>>>>> 1b7d2be (Card with css and action)
