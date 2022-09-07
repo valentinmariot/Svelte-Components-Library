@@ -158,13 +158,15 @@
   import Card from './components/Card/Card.svelte'
 
   let title ="Beyonce Knowles" ;
-  let description = "Chanteuse afro-américaine née le 04 septembre 1981, elle est l'une des artistes les plus populaires de sa génération." ;
+  let shortDescription = "Chanteuse afro-américaine née le 04 septembre 1981, elle est l'une des artistes les plus populaires de sa génération." ;
+  let longDescription ="Et magnis Rheni difficultatibus cogitationibus convolantibus Rheni suspendere cum quid attonitus capesseret prope nimia multis fluminis obrutis suspendere conpage vetabantur prope pontem difficultatibus cum vi inpossibile ad multis callibus telis capesseret Rauracum vi supercilia resistente itaque vetabantur quid Romani fluminis suspendere supercilia Rheni nive quid Romani convolantibus plurimis cogitationibus conpage." ;
   let listIcons = [ "X", "O", "I"]
 </script>
 
 <Card  
   title={title} 
-  description={description} 
+  shortDescription={shortDescription}
+  longDescription={longDescription}  
   listIcons={listIcons} 
 
 />

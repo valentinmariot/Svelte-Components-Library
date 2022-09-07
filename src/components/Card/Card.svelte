@@ -1,58 +1,99 @@
 <script>
 
 export let title ;
-export let description ;
+export let shortDescription ;
+export let longDescription ;
 export let listIcons ;
-let isClosed = true ; 
+let isClosed = true ;
+let isMin = true; 
 let isMax = false ; 
-
-const closeCard = () => {
-  console.log("Fermer popin")
-}
+let isShortCard = false ; 
 
 const minCard = () => {
-  if (isMax !== false) {
-    isMax = false ; 
-    return isMax ; 
+  isShortCard = false ;
+  isMax = false ; 
+  if (isMin === false) {
+    isMin = true ;
+     
+  } else {
+    isMin = false ; 
+  }
+}
+
+
+
+const shortCard = () => {
+  isMax = false ; 
+  if (isShortCard === false) {
+    isShortCard = true ;
+    isMin = false  ;
+    return isShortCard ; 
+  } else {
+    isShortCard = false ;
+    isMin = true  ;
+    return isShortCard ; 
   }
 }
 
 const maxCard = () => {
   if (isMax === false) {
+    isShortCard = true ;
     isMax = true ; 
-    return isMax ; 
+    isMin = false  ;
+  } else {
+    isShortCard = false ;
+    isMax = false ; 
+    isMin = true  ;
   }
 }
 
 </script>
+<ul>
+  <li>Min : {isMin} </li>
+  <li>Short card : {isShortCard}  </li>
+  <li>Long Card : {isMax} </li>
 
-{isMax}
+</ul>
+
+
 <div class="big-conatiner-card" >
  
 
-    <div class="card {isClosed ? "open" : "close"} " >
+    <div class="card {isClosed ? "close" : "open"} " >
       <div class="header-card"> 
         <div class="info-light"> 
-          <span on:click={() => isClosed = false}></span>
+
           <span on:click={minCard}></span>
+          <span on:click={() => shortCard()}></span>
           <span on:click={maxCard}></span>
         </div>
       </div>
       <div  class="image-area"> 
         <img class="card-img-top" src="https://static1.purepeople.com/articles/5/11/54/35/@/1051093-beyonce-knowles-attending-the-hbo-624x600-2.jpg" alt="Card image" style="width:50%">
       </div>
-      <h4 class="card-title">{title}</h4>
-      <div class="card-body {isMax ? "open" : "close"}" >
-        <p class="card-text"> {description}</p>
+      <div class="title-area"> 
+        <h4 class="card-title">{title}</h4>
+      </div>
+      <div class="card-body {isMin ? "close" : "open"}" >
+        <div class="short-text-area {isShortCard ? "open" : "close"}"> 
+          <p class="card-text"> {shortDescription}</p>
+        </div>
+        <div class="long-text-area {isMax ? "open" : "close"}"> 
+          <p class="card-text"> {longDescription}</p>
+        </div>
         <div class="icons-area">
-          <div class="all-social-icons">
-            <ul>
-              <li> <a href="https://twitter.com/"> {listIcons[0]}</a></li>
-              <li> <a href="https://fr-fr.facebook.com/"> {listIcons[1]}</li>
-              <li> <a href="https://www.instagram.com/?hl=fr"> {listIcons[2]}</a>
-              </li>
-            </ul>
-          </div>
+
+          {#if isShortCard || isMax}
+            <div class="all-social-icons">
+              <ul>
+                <li> <a href="https://twitter.com/"> {listIcons[0]}</a></li>
+                <li> <a href="https://fr-fr.facebook.com/"> {listIcons[1]}</li>
+                <li> <a href="https://www.instagram.com/?hl=fr"> {listIcons[2]}</a>
+                </li>
+              </ul>
+            </div>
+            {/if}
+
         </div>
       </div>
     
@@ -71,13 +112,27 @@ const maxCard = () => {
   width: 307px ;
   border-radius: 3px;
 }
-.card.open {
+
+
+.short-text-area.open {
   display: block;
 }
 
-.card.close {
+.short-text-area.close {
   display: none;
 }
+
+.long-text-area.open {
+  display: block;
+}
+
+.long-text-area.close {
+  display: none;
+}
+
+
+/* HEADER AVEC TEMOIN DE COULEURS */
+
 
 .header-card .info-light {
   height: 20px;
@@ -108,6 +163,7 @@ const maxCard = () => {
   background-color: #8bd2dd;
 }
 
+/* ESPACE IMAGE  */
 
 .image-area {
   border-top: 3px solid rgba(0, 24, 88, 1) ;
@@ -122,26 +178,7 @@ const maxCard = () => {
 
 }
 
-
-
-.card-body {
-  height: 100px;
-
-}
-
-.card-body.open {
-  height: 100px;
-  display: block;
-
-}
-
-.card-body.close {
-  display: none;
-}
-
-.card-body p{
-  text-align: center;
-}
+/* -- TITRE */
 
 h4 {
   margin: 0;
@@ -154,6 +191,29 @@ h4 {
   color : rgba(0, 24, 88, 1) ;
   text-align: center;
 }
+
+
+/*  -- CARD BODY */
+
+.card-body {
+  height: 340px;
+  background-color: #F582AE;
+
+}
+
+.card-body.open {
+  display: block;
+
+}
+
+.card-body.close {
+  display: none;
+}
+
+.card-body p{
+  text-align: justify;
+}
+
 
 
 .card-body p {
