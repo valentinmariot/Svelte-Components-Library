@@ -1,7 +1,7 @@
 import './app.css'
-import App from './App.svelte'
+import Menu from './components/Menu/MenuTest.svelte'
 
-const app = new App({
+const app = new Menu({
   target: document.getElementById('app')
 })
 

@@ -1,23 +1,22 @@
 <script>
   import { fly } from 'svelte/transition'
 
-  import AnimatedHamburger from './BurgerMenu.svelte'
-  // import logo from './svelte-logo.svg'
+  import BurgerMenu from './BurgerMenu.svelte'
 
   export let open = false
   export let onClick = () => {
     open = !open
   }
-
-  let items = ['qsd','qsdfqdsq', 'qsdfqsd']
+  export let isLeft = undefined
+  export let items = ['item 1','item 2', 'item 3']
 </script>
 
-<header>
+<header class={isLeft ? 'isLeft' : ''} >
   <div class="main">
     <div class="logo">
     
     </div>
-    <AnimatedHamburger {open} {onClick} />
+    <BurgerMenu {open} {onClick} />
   </div>
 
   {#if open}
@@ -39,6 +38,10 @@
     position: relative;
     font-size: 2rem;
     z-index: 2;
+    /* display: flex; */
+  }
+  header.isLeft {
+    display: flex;
   }
 
   .main {
@@ -73,5 +76,7 @@
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
+    top: 86px;
+    width:100%;
   }
 </style>
