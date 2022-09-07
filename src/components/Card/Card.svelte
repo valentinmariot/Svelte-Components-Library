@@ -48,13 +48,6 @@ const maxCard = () => {
 }
 
 </script>
-<ul>
-  <li>Min : {isMin} </li>
-  <li>Short card : {isShortCard}  </li>
-  <li>Long Card : {isMax} </li>
-
-</ul>
-
 
 <div class="big-conatiner-card" >
  
