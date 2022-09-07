@@ -32,18 +32,24 @@
 
     .modal {
         background-color: rgba(245, 130, 174, 0.3);
-        color: black;
-        
-        max-width: 80vw;
+        color: white;
+        /* max-width: 80vw; */
         padding: 1rem;
-        margin: 15% auto;
-        border: 3px solid #001858;
+        margin: 10% auto;
+        /* border: 3px solid #001858; */
         border-radius: 3px;
-
+        /* 
         width: 350px;
-        height: 190px;
+        height: 190px; */
         font-family: 'Roboto', sans-serif;
         font-size: 14px;
+        width: 525px;
+        height: 420px;
+
+        /* stroke-svelte */
+
+        background: #001858;
+        border-radius: 3px;
         /* left: 120px;
         top: 125px; */
     }
@@ -51,6 +57,7 @@
     .close {
         float: right;
         cursor: pointer;
+        color: #F582AE;
     }
 
     .close:hover {
