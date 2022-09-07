@@ -1,11 +1,11 @@
 <script>
-    let styleType = 'checkbox';
-    let data = [];
-    let elements = ["Naruto", "Tanjiro", "Luffy", "Asta"];
-    let style = '' 
-  </script>
-  <div class='app'>
-  {#if styleType == 'checkbox'}
+    export let styleType;
+    export let data;
+    export let elements;
+    export let style;
+</script>
+<div class='app'>
+    {#if styleType == 'checkbox'}
     {#each elements as element}
         <label class='container'>
             {element}
@@ -242,7 +242,7 @@
                     display: block;
                     }
                 
-                   /* Style the checkmark/indicator */
+                    /* Style the checkmark/indicator */
                     .container .checkmark:after {
                     left: 9px;
                     top: 5px;
@@ -262,8 +262,8 @@
                 </style>
         {/if}
     {/each}
-  {:else if styleType == 'radio'}
-  {#each elements as element}
+    {:else if styleType == 'radio'}
+    {#each elements as element}
         <label class='containerButton'>
             {element}
             <input type='radio' bind:group={data} value={element} />
@@ -494,13 +494,12 @@
                     border-radius: 50%;
                     background: #FEF6E4;
                     }
-  
+
                 </style>
         {/if}
-  {/each}
-  {:else}
+    {/each}
+    {:else}
         <h1>Veuillez Choisir dans la variable styleType 'radio' ou 'checkbox'</h1>
-  {/if}
-  </div>
-  
-  
+    {/if}
+</div>
+
