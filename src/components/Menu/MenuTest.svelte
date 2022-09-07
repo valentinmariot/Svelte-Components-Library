@@ -1,6 +1,14 @@
 <script>
      import Menu from "./Menu.svelte";
+     
 </script>
-  
-<Menu />
+  <div class="container">
+       <Menu isLeft={false} />
 
+  </div>
+
+  <style>
+     .container{
+          width: 300px;
+     }
+  </style>
