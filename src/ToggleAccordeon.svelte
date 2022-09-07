@@ -4,12 +4,15 @@
   show[id] = false;
 </script>
 
+<!-- Pour ajouter des éléments : dupliquer la div .container, l'ajouter après le dernier container et mettre le contenu souhaité dans la div .label et la div .content -->
+<!-- Puis modifier les les index du tableau show ("ex : show[1]") en les remplaçant par le par le chiffre suivant par rapport au container précédent -->
+
 <body>
   <div class="accordion-body">
     <div class="accordion">
       <div class="container"
       class:active="{show[1] === true}"
-      on:click="{() => show[1] = !show[1]}">
+      on:click="{() => show[1] = !show[1]}"> 
         <div class="label">Toggle 1</div>
         <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute.....</div>
       </div>
