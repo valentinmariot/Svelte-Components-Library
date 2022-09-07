@@ -8,7 +8,7 @@
     export let min ;
     export let max ;
     export let forData ;
-    export let labelText ;
+    // export let labelText ;
     export let defaultValue = null;
     
     const giveDefaultValue = () => {
@@ -23,42 +23,51 @@
     </script>
     
     <div class="container">
-        <label for={ forData } class="label-slider">{labelText}</label>
-        <div class="input"> 
+        <div class="container-input"> 
 
             <div class="text min-input">{min}</div>
-            <input 
-            type="range" 
-            id={idInput} 
-            name={nameInput} 
-            min={min} 
-            max={max} 
-            bind:value = { valueInput }
-            class="input-slider"
-            >
+            <div class="input-area">
 
+              <input 
+              type="range" 
+              id={idInput} 
+              name={nameInput} 
+              min={min} 
+              max={max} 
+              bind:value = { valueInput }
+              class="input-slider"
+              >
+  
+
+
+            </div>
+         
             <div class="text max-input">{max}</div>
 
         </div>
-       
         <h2>{ valueInput }</h2>
     
     </div>
 
 
     <style>
+
+
 .container {
     background-color: palevioletred;
+    height: 100vh;
 }
 
 
-.input{
+.container-input {
     background-color: darkcyan;
+    display: flex;
 }
-.container  div.text {
+.container div.text {
     background-color: rgb(112, 126, 216);
     height: 40px;
     display : inline-block ;
+    margin-top: 10px;
 }
 
 
@@ -70,9 +79,8 @@ input[type="range"] {
     /* background: transparent; */
     background-color: brown;
     cursor: pointer;
-    width: 20rem;
+    width: 210px;
     /* height: 60px; */
-    padding: 2em 0;
     border-radius: 6px ;
 }
 
@@ -86,7 +94,7 @@ input[type="range"]:focus {
 input[type="range"]::-webkit-slider-runnable-track {
    background-color: #053a5f;
    border-radius: 0.5rem;
-   height: 0.5rem;  
+   /* height: 0.5rem;   */
 }
 
 /* slider Puce */
@@ -94,14 +102,14 @@ input[type="range"]::-webkit-slider-thumb {
 
   -webkit-appearance: none; /* Override default look */
    /* appearance: none; */
-   margin-top: -6px;
+   /* margin-top: -6px; */
    /* Centerr la "puce" on the track */
 
    /*custom styles*/
    background-color: #74a264;
-   border-radius: 6.6px;
-   height: 20px;
-   width: 20px;
+   border-radius: 50%;
+   height: 16px;
+   width: 16px;
 }
 
 
@@ -110,25 +118,31 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 -webkit-appearance: none; /* Override default look */
  /* appearance: none; */
- margin-top: -6px;
+ /* margin-top: -6px; */
  /* Centerr la "puce" on the track */
 
  /*custom styles*/
  background-color: #a164a2;
  border-radius: 6.6px;
- height: 20px;
- width: 20px;
+
 }
 
 /* Bordure du Bouton */
-input[type="range"]:focus::-webkit-slider-thumb {   
+/* input[type="range"]:focus::-webkit-slider-thumb {   
   border: 1px solid #053a5f;
   outline: 3px solid #053a5f;
   outline-offset: 0.125rem; 
-}
+} */
 
 
-
+/* input[type="range" i] {
+    appearance: auto;
+    cursor: default;
+    color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+    padding: initial;
+    border: initial;
+    margin: 0px;
+} */
 
 
 </style>
