@@ -1,4 +1,4 @@
-<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<!-- <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
 
 <script>
     let open = false;
@@ -8,7 +8,6 @@
     export function hide() {
         open = false;
     }
-    
 </script>
 
 {#if open}
@@ -20,9 +19,9 @@
     </div>
 {/if}
 <style>
+
     .pop-up {
-        /* background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.6); */
+        background-color: rgba(0, 0, 0, 0.3);
         position: fixed;
         width: 100%;
         height: 100%;
@@ -33,31 +32,24 @@
     .modal {
         background-color: rgba(245, 130, 174, 0.3);
         color: white;
-        /* max-width: 80vw; */
-        padding: 1rem;
-        margin: 10% auto;
-        /* border: 3px solid #001858; */
+        padding: 1em;
+        padding-bottom: 3em;
+        margin: 5% auto;
         border-radius: 3px;
-        /* 
         width: 350px;
-        height: 190px; */
         font-family: 'Roboto', sans-serif;
         font-size: 14px;
-        width: 525px;
-        height: 420px;
-
-        /* stroke-svelte */
-
-        background: #001858;
+        background: #001858; 
         border-radius: 3px;
-        /* left: 120px;
-        top: 125px; */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 
     .close {
         float: right;
         cursor: pointer;
         color: #F582AE;
+        font-size: 50px;
+        font-weight: bold;
     }
 
     .close:hover {
