@@ -3,11 +3,7 @@
 export let title ;
 export let shortDescription ;
 export let longDescription ;
-<<<<<<< HEAD
-export let listIcons ;
-=======
-export let imgSrc ;
->>>>>>> d2e2561 (props img added)
+export let imgSrc = undefined;
 let isClosed = true ;
 let isMin = true; 
 let isMax = false ; 
@@ -65,17 +61,12 @@ const maxCard = () => {
           <span on:click={maxCard}></span>
         </div>
       </div>
-<<<<<<< HEAD
-      <div  class="image-area"> 
-        <img class="card-img-top" src="https://static1.purepeople.com/articles/5/11/54/35/@/1051093-beyonce-knowles-attending-the-hbo-624x600-2.jpg" alt="Card image" style="width:50%">
-=======
       <div  class="container-image-area"> 
         <div class="image-area">
           <img class="card-img-top" src="./src/components/Card/PhotoHomme.png" alt="Card" style="width:50%">
            <img class="egg-logo" src={imgSrc} alt="logo" >
           
         </div>
->>>>>>> 7fea6cf (card done)
       </div>
       <div class="title-area"> 
         <h4 class="card-title">{title}</h4>
@@ -92,15 +83,9 @@ const maxCard = () => {
           {#if isShortCard || isMax}
             <div class="all-social-icons">
               <ul>
-<<<<<<< HEAD
-                <li> <a href="https://twitter.com/"> {listIcons[0]}</a></li>
-                <li> <a href="https://fr-fr.facebook.com/"> {listIcons[1]}</li>
-                <li> <a href="https://www.instagram.com/?hl=fr"> {listIcons[2]}</a>
-=======
                 <li> <a href="https://twitter.com/" class="ico-twitter"> </a></li>
                 <li> <a href="https://fr.linkedin.com/" class="ico-linkedin"> </a>
 
->>>>>>> d2e2561 (props img added)
                 </li>
               </ul>
             </div>
@@ -252,16 +237,6 @@ h4 {
   margin-right: 20px;
 }
 
-<<<<<<< HEAD
-
-.icons-area {
-  /* background-color: #F582AE; */
-
-
-}
-
-=======
->>>>>>> 7fea6cf (card done)
 .icons-area ul {
   /* background-color: #bf0b50; */
   width: 100%;
