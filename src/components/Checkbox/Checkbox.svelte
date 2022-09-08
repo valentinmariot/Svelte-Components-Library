@@ -1,9 +1,8 @@
-<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <script>
-    let styleType = 'radio';
-    let data = [];
-    let elements = ["Naruto", "Tanjiro", "Luffy", "Asta"];;
-    let style = '';
+    export let styleType;
+    export let data;
+    export let elements;
+    export let style;
 </script>
 <div class='app'>
     {#if styleType == 'checkbox'}
