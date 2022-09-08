@@ -5,3 +5,6 @@ Inspired from <a href="https://www.mackenziechild.me/" style="color: #8bd3dd">Ma
 
 ## RUN PROJECT      
 ```npm run dev```    
+
+## QUICK VIEW   
+<img src="./src/assets/FIGMA.png" height="1000px"/>
