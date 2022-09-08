@@ -26,7 +26,7 @@
 	}
 	.icon {
 		display: inline-block;
-		color: #ffffff;
+		color: #172c66;
 		width: 1em;
 		height: 1em;
 		fill: currentColor;
@@ -44,14 +44,15 @@
 	button {
 		position: relative;
 		z-index: 1;
-		background-color: black;
-		color: white;
+		background-color: #f582ae;
+		color: #172c66;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		overflow: hidden;
 		border: unset;
 		border-radius: 10px;
+		padding: 10px 20px;
 	}
 
 	.open {

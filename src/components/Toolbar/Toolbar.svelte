@@ -4,7 +4,7 @@
 	import Icon from "./Icon.svelte";
 
 	export let open = false;
-	export let iconMenu = "ico-apple";
+	export let iconMenu = "ico-settings";
 
 	export let onClick = (e) => {
 		open = !open;
@@ -12,9 +12,9 @@
 
 	export let isRight = undefined;
 	export let items = [
-		{ value: "item 1", href: "href1", icon: "ico-house" },
-		{ value: "item 2", href: "href2", icon: "ico-location" },
-		{ value: "item 3", icon: "ico-apple", isDisabled: true },
+		{ value: "Color picker", href: "href1", icon: "ico-picker" },
+		{ value: "Edit", href: "href2", icon: "ico-pencil" },
+		{ value: "Delete", icon: "ico-bin", isDisabled: true },
 	];
 
 	// export let items2 = [{value:'item 1', icon:'ico-apple'}, {value:'item 2', icon:'ico-apple'}, {value:'item 3', icon:'ico-apple'}]
@@ -28,8 +28,8 @@
 
 	{#if open}
 		<div transition:fade>
-			<div class="triangle {isRight ? 'by-left' : ''}" />
-			<nav class={isRight ? "by-left-nav" : ""}>
+			<!-- <div class="triangle {isRight ? 'by-left' : ''}" /> -->
+			<nav id="test" class={isRight ? "by-left-nav" : ""}>
 				{#each items as item}
 					<a
 						on:click={onClick.bind(null, item.value)}
@@ -49,6 +49,12 @@
 </header>
 
 <style>
+	/* #test {
+		margin-top: 30px;
+		padding: 10px 15px;
+		width: 300px;
+		box-shadow: 0 5px 15px -10px rgb(31 18 53 / 60%);
+	} */
 	.item {
 		margin-left: 20px;
 	}
@@ -89,7 +95,7 @@
 		color: whitesmoke;
 	}
 	a:hover {
-		background: rgb(167, 161, 162);
+		background: #F9BCC9;
 	}
 	a:active {
 	}
@@ -102,7 +108,7 @@
 	nav {
 		position: absolute;
 		text-align: center;
-		background-color: black;
+		background-color: #f582ae;
 		position: absolute;
 		display: flex;
 		flex-direction: column;
@@ -112,6 +118,10 @@
 		margin-top: 15px;
 		border-radius: 10px;
 		overflow: hidden;
+		margin-top: 30px;
+		padding: 10px 15px;
+		width: 300px;
+		box-shadow: 0 5px 15px -10px rgb(31 18 53 / 60%);
 	}
 
 	.disable-link {
@@ -129,7 +139,7 @@
 		border: 0 solid transparent;
 		border-right-width: 10px;
 		border-left-width: 10px;
-		border-bottom: 10px solid #000;
+		border-bottom: 10px solid #f582ae;
 	}
 
 	.by-left {

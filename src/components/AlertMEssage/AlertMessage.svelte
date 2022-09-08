@@ -1,7 +1,7 @@
 <script>
     // Choisissez le type de message d'alerte parmis les suivantes : warning, danger, success, info, pink, beige ou blueprints et mettez le dans la variable 'typeAlert'
 
-    let typeAlert = 'warning';
+    export let typeAlert = 'warning';
 
     const setTextColor = () => {
         if (typeAlert == 'danger') {

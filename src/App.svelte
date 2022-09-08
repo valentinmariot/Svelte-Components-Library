@@ -4,13 +4,26 @@
 	import ToolbarSection from "./components/Toolbar/ToolbarSection.svelte";
 	import Omelette from "./components/Omelette/Omelette.svelte";
 	import Loader from "./components/Loader/Loader.svelte";
-	import Modal from "./components/Modal/Modal.svelte";
 	import PopUp from "./components/PopUp/PopUp.svelte";
 	import Checkbox from "./components/Checkbox/Checkbox.svelte";
+	import Slider from "./components/Slider/Slider.svelte";
+	import Card from "./components/Card/Card.svelte";
+import AlertMessage from "./components/AlertMEssage/AlertMessage.svelte";
+import CreditCard from "./components/CreditCard/CreditCard.svelte";
+import ToggleAccordeon from "./components/ToggleAccordeon/ToggleAccordeon.svelte";
+
+let tabElements = ["Naruto", "Tanjiro", "Luffy", "Asta"];
+    let tabData = [];
 </script>
 
+<div class="header">
+    <img src="./src/assets/OMELETTE.png" alt="logo" width="150px" />
+    <h1>SVELTE COMPONENTS LIBRARY</h1>
+    <h2 id="hhfp">-An Happy Hues fans project-</h2>
+</div>
+
 <div class="container">
-	<h1>Omelette Library</h1>
+
 	<p />
 	<section class="m-top">
 		<h2>Menu</h2>
@@ -33,6 +46,75 @@
 			</li>
 		</legend>
 	</section>
+
+	<section class="m-top">
+		<h2>Alert Message</h2>
+		<hr />
+        <div class="alertmessage">
+		    <AlertMessage />
+        </div>
+        <div class="alertmessage">
+		    <AlertMessage typeAlert='info' />
+        </div>
+        <div class="alertmessage">
+            <AlertMessage typeAlert='danger' />
+
+        </div>
+        <div class="alertmessage">
+            <AlertMessage typeAlert='success' />
+
+        </div>
+        <div class="alertmessage">
+            <AlertMessage typeAlert='pink' />
+
+        </div>
+		<AlertMessage typeAlert='beige' />
+
+
+		<legend>
+
+		</legend>
+	</section>
+
+	<section class="m-top">
+		<h2>Credit Card</h2>
+		<hr />
+        <CreditCard />
+
+		<legend>
+
+		</legend>
+	</section>
+<!-- 
+	<section class="m-top">
+		<h2>Checkbox</h2>
+		<hr />
+        <div class="checkboxxx">
+
+        <div class='boxxx'>
+        <Checkbox 
+    styleType = 'radio'
+    data = {tabData}
+    elements = {tabElements}
+    style = ''
+></Checkbox>
+</div>
+<div class='boxxx'>
+
+        <Checkbox 
+    styleType = 'checkbox'
+    data = {tabData}
+    elements = {tabElements}
+    style = 'primary'
+></Checkbox>
+</div>
+</div>
+
+
+		<legend>
+
+		</legend>
+	</section> -->
 
 	<section class="m-top">
 		<h2>Switch</h2>
@@ -83,59 +165,91 @@
 	</section>
 
 	<section class="m-top">
-		<h2>Omelette</h2>
-		<hr />
-
-		<Omelette />
-
-		<legend>
-			<h3>Properties :</h3>
-		</legend>
-	</section>
-
-	<section class="m-top">
 		<h2>Loader</h2>
 		<hr />
 		<Loader isLoading />
 
 		<legend>
 			<h3>Properties :</h3>
+
+            <ul>
+                <li>
+                    <span class="title">isLoading </span>:
+                    <p>Display loader on load</p>
+                </li>
+                <li>
+                    <span class="title">selectedColor </span>:
+                    <p>Pink or Blue</p>
+                </li>
+            </ul>
 		</legend>
 	</section>
-	<!-- ! ici composant s'affiche pas -->
+
 	<section class="m-top">
-		<h2>Modal</h2>
+		<h2>Dropdown</h2>
 		<hr />
-		<Modal />
+		<ToggleAccordeon />
+
+	</section>
+	<section class="m-top">
+		<h2>Profile Card</h2>
+		<hr />
+		<Card title=' Mackenzie Child' shortDescription='Some Lorem Ipsum Bacon Vegan here'
+        
+        longDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+        />
 
 		<legend>
-			<h3>Properties :</h3>
+			<!-- <h3>Properties :</h3> -->
 		</legend>
 	</section>
 
 	<section class="m-top">
-		<h2>PopUp</h2>
+		<h2>Slider</h2>
 		<hr />
-		<PopUp />
-
+        <div class="thefameuxslider">
+		<Slider min='0' max='100' defaultValue='0'/>
+    </div>
 		<legend>
-			<h3>Properties :</h3>
+			<!-- <h3>Properties :</h3> -->
 		</legend>
 	</section>
-	<!-- ! doesn't work -->
-	<!-- ? En ajoutant un de valeurs indiqués dans prop, il y a pas d'affichage ? -->
+
 	<section class="m-top">
-		<h2>Checkbox</h2>
+		<h2>Dropdown</h2>
 		<hr />
-		<Checkbox />
+		<ToggleAccordeon />
 
-		<legend>
-			<h3>Properties :</h3>
-		</legend>
 	</section>
+
 </div>
 
 <style>
+
+.boxxx {
+    margin: 0 100px;
+}
+
+
+.checkboxxx {
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    width: 500px;
+}
+    .alertmessage {
+        margin: 15px 0;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #hhfp{
+        color: #f582ae;
+    }
 	.container {
 		width: 500px;
 	}
@@ -152,4 +266,8 @@
 		font-size: 1.125rem;
 		text-decoration: underline;
 	}
+
+    .thefameuxslider {
+        margin: 50px 0;
+    }
 </style>

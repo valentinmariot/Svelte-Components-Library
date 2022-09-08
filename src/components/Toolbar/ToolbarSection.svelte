@@ -7,9 +7,6 @@
 		<Toolbar isRight />
 	</div>
 
-	<div class="position-absolute">
-		<Toolbar />
-	</div>
 	<br />
 	<br />
 </div>

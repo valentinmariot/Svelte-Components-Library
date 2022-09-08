@@ -3,10 +3,6 @@
 export let title ;
 export let shortDescription ;
 export let longDescription ;
-<<<<<<< HEAD
-export let imgSrc = undefined;
-=======
->>>>>>> 2a17bd5 (simple input range)
 let isClosed = true ;
 let isMin = true; 
 let isMax = false ; 
@@ -66,13 +62,7 @@ const maxCard = () => {
       </div>
       <div  class="container-image-area"> 
         <div class="image-area">
-<<<<<<< HEAD
-          <img class="card-img-top" src="./src/components/Card/PhotoHomme.png" alt="Card" style="width:50%">
-           <img class="egg-logo" src={imgSrc} alt="logo" >
-          
-=======
-          <img class="card-img-top" src="https://static1.purepeople.com/articles/5/11/54/35/@/1051093-beyonce-knowles-attending-the-hbo-624x600-2.jpg" alt="Card image" style="width:50%">
->>>>>>> 2a17bd5 (simple input range)
+          <img class="card-img-top" src="https://assets.website-files.com/5dd40aa8049df8748c72d0ee/5dd949c5967a3b4d242ab4f3_mc-2019-avatar-medium.jpg" alt="Card image" style="width:50%">
         </div>
       </div>
       <div class="title-area"> 
@@ -91,11 +81,8 @@ const maxCard = () => {
             <div class="all-social-icons">
               <ul>
                 <li> <a href="https://twitter.com/" class="ico-twitter"> </a></li>
-<<<<<<< HEAD
-=======
                 <li> <a href="https://fr-fr.facebook.com/" class="ico-facebook"> </a></li>
                 <li> <a href="https://www.instagram.com/?hl=fr" class="ico-instagram"> </a>
->>>>>>> 2a17bd5 (simple input range)
                 <li> <a href="https://fr.linkedin.com/" class="ico-linkedin"> </a>
 
                 </li>
@@ -114,29 +101,15 @@ const maxCard = () => {
 
 <style>
 
-<<<<<<< HEAD
-.big-conatiner-card {
-  font-size: 'Roboto';
-}
-
-=======
->>>>>>> 2a17bd5 (simple input range)
 
 .card {
   background-color: rgba(243, 210, 193, 1);
   border : 3px solid rgba(0, 24, 88, 1) ;
   width: 307px ;
   border-radius: 3px;
-<<<<<<< HEAD
-=======
   box-shadow: 0 7px 15px -10px rgb(31 18 53 / 60%);
->>>>>>> 2a17bd5 (simple input range)
 }
 
-
-.short-text-area.open {
-  display: block;
-}
 
 .short-text-area.close {
   display: none;
@@ -189,41 +162,15 @@ const maxCard = () => {
   border-top: 3px solid rgba(0, 24, 88, 1) ;
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
-  position: relative;
-}
-
-
-
-.image-area img:nth-child(1) {
-  background-color: antiquewhite;
-=======
 }
 
 .image-area img {
->>>>>>> 2a17bd5 (simple input range)
   margin-top: 1em;
   border: 3px solid rgba(0, 24, 88, 1) ;
   border-radius: 3px;
 
 }
 
-<<<<<<< HEAD
-.image-area img:nth-child(2) {
-  margin-top: 0.5em;
-  position: absolute;
-  top : 8 ;
-  right: 160;
-  margin-left: 160px;
-
-}
-
-/* .egg-logo  {
-  background-color: #82c5f5;
-} */
-
-=======
->>>>>>> 2a17bd5 (simple input range)
 /* -- TITRE */
 
 h4 {
@@ -231,15 +178,9 @@ h4 {
   padding: 1em 0;
   font-family: 'Roboto';
   font-style: normal;
-<<<<<<< HEAD
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 23.44px;
-=======
   font-weight: 600;
   font-size: 20px;
   line-height: 23px;
->>>>>>> 2a17bd5 (simple input range)
   color : rgba(0, 24, 88, 1) ;
   text-align: center;
 }
@@ -264,27 +205,19 @@ h4 {
 
 .card-body p{
   text-align: justify;
-<<<<<<< HEAD
-  font-weight: 400;
-  font-size: 16px;
-=======
 }
 
 
 
 .card-body p {
->>>>>>> 2a17bd5 (simple input range)
   margin-top: 0;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 2a17bd5 (simple input range)
 .icons-area ul {
   /* background-color: #bf0b50; */
   width: 100%;
@@ -303,12 +236,6 @@ h4 {
   width: 20px;
   height: 20px;
   margin: 6px;
-<<<<<<< HEAD
-  background-color: darkturquoise;
-}
-
-
-=======
   /* background-color: darkturquoise; */
 }
 
@@ -329,7 +256,6 @@ h4 {
 
 
 
->>>>>>> 2a17bd5 (simple input range)
 
 
 </style>
