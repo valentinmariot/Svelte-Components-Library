@@ -6,6 +6,8 @@
 	import Loader from "./components/Loader/Loader.svelte";
 	import PopUp from "./components/PopUp/PopUp.svelte";
 	import Checkbox from "./components/Checkbox/Checkbox.svelte";
+	import Slider from "./components/Slider/Slider.svelte";
+	import Card from "./components/Card/Card.svelte";
 import AlertMessage from "./components/AlertMEssage/AlertMessage.svelte";
 import CreditCard from "./components/CreditCard/CreditCard.svelte";
 import ToggleAccordeon from "./components/ToggleAccordeon/ToggleAccordeon.svelte";
@@ -21,7 +23,7 @@ let tabElements = ["Naruto", "Tanjiro", "Luffy", "Asta"];
 </div>
 
 <div class="container">
-	<h1>Omelette Library</h1>
+
 	<p />
 	<section class="m-top">
 		<h2>Menu</h2>
@@ -169,6 +171,47 @@ let tabElements = ["Naruto", "Tanjiro", "Luffy", "Asta"];
 
 		<legend>
 			<h3>Properties :</h3>
+
+            <ul>
+                <li>
+                    <span class="title">isLoading </span>:
+                    <p>Display loader on load</p>
+                </li>
+                <li>
+                    <span class="title">selectedColor </span>:
+                    <p>Pink or Blue</p>
+                </li>
+            </ul>
+		</legend>
+	</section>
+
+	<section class="m-top">
+		<h2>Dropdown</h2>
+		<hr />
+		<ToggleAccordeon />
+
+	</section>
+	<section class="m-top">
+		<h2>Profile Card</h2>
+		<hr />
+		<Card title=' Mackenzie Child' shortDescription='Some Lorem Ipsum Bacon Vegan here'
+        
+        longDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+        />
+
+		<legend>
+			<!-- <h3>Properties :</h3> -->
+		</legend>
+	</section>
+
+	<section class="m-top">
+		<h2>Slider</h2>
+		<hr />
+        <div class="thefameuxslider">
+		<Slider min='0' max='100' defaultValue='0'/>
+    </div>
+		<legend>
+			<!-- <h3>Properties :</h3> -->
 		</legend>
 	</section>
 
@@ -223,4 +266,8 @@ let tabElements = ["Naruto", "Tanjiro", "Luffy", "Asta"];
 		font-size: 1.125rem;
 		text-decoration: underline;
 	}
+
+    .thefameuxslider {
+        margin: 50px 0;
+    }
 </style>

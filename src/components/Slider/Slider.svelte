@@ -52,7 +52,7 @@
             </div>
             <div class="top-end-container" >
               {#if valueInput === undefined}
-              <div class="text top-max-input">6</div>
+              <!-- <div class="text top-max-input">6</div> -->
               {/if}
             </div> 
             <div class="input-area" >
@@ -86,8 +86,7 @@
 
 
 .container {
-    height: 100vh;
-    width: 870px;
+
     display: flex;
     justify-content: center;
     align-items: center;
