@@ -15,6 +15,7 @@
 >>>>>>> f29deae (Add format style props)
 :root {
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
 <<<<<<< HEAD
@@ -132,6 +133,8 @@ button:focus-visible {
 >>>>>>> f29deae (Add format style props)
 =======
 =======
+=======
+>>>>>>> 77aea3e (Fix style)
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: 	#000000;
@@ -147,6 +150,10 @@ button:focus-visible {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
+<<<<<<< HEAD
   }
 >>>>>>> 0f81643 (Add isLeft prop)
 >>>>>>> 26f31ab (Add isLeft prop)
+=======
+  }
+>>>>>>> 77aea3e (Fix style)
