@@ -35,31 +35,39 @@
     let backgroundColor = setBackgroundColor()
     let textColor = setTextColor()
 
+    let open = true
+
+    const hide = () => {
+        open = false
+    }
+
 </script>
 
-<div class=container style="color: {textColor}; background: {backgroundColor};">
-    <p class="content">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
-    <span class="ico-close icon" style="color: {textColor}; background: {backgroundColor};"/>
-</div>
+{#if (open)}
+    <div class="container" style="color: {textColor}; background: {backgroundColor};">
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <span class="ico-close icon" style="color: {textColor}; background: {backgroundColor};" on:click={() => hide()}/>
+    </div>
+{/if}
 
 <style>
-    .container:before {
-        width: 100%;
-        display: block;
-        text-align: center;
-        position: absolute;
-        z-index: 10;
+
+    .container {
+        display: flex;
+        border-radius: 5px;
     }
 
-    .container .content {
-        position: relative;
-        width: 60%;
+    .content {
+        flex: 9;
+        padding-left: 25px;
+        border-radius: 5px;
     }
 
-    .container .icon {
-        position: relative;
-        left: 60%;
-        width: 40%;
+    .icon {
+        padding-top: 7px;
+        padding-right: 10px;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
 </style>
