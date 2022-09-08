@@ -11,7 +11,9 @@
 {#if open}
 	<div class="pop-up">
 		<div class="modal">
-			<span class="close" on:click={() => hide()}>&times;</span>
+			<span class="close" on:click={() => {
+				hide();
+			}}>&times;</span>
 			<slot />
 		</div>
 	</div>
@@ -19,14 +21,12 @@
 
 <style>
 	.pop-up {
-		background-color: rgba(0, 0, 0, 0.3);
 		position: fixed;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		left: 0;
 	}
-
 	.modal {
 		background-color: rgba(245, 130, 174, 0.3);
 		color: white;
@@ -48,7 +48,7 @@
 		float: right;
 		cursor: pointer;
 		color: #f582ae;
-		font-size: 50px;
+		font-size: 25px;
 		font-weight: bold;
 	}
 

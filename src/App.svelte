@@ -4,9 +4,14 @@
 	import ToolbarSection from "./components/Toolbar/ToolbarSection.svelte";
 	import Omelette from "./components/Omelette/Omelette.svelte";
 	import Loader from "./components/Loader/Loader.svelte";
-	import Modal from "./components/Modal/Modal.svelte";
 	import PopUp from "./components/PopUp/PopUp.svelte";
 	import Checkbox from "./components/Checkbox/Checkbox.svelte";
+import AlertMessage from "./components/AlertMEssage/AlertMessage.svelte";
+import CreditCard from "./components/CreditCard/CreditCard.svelte";
+import ToggleAccordeon from "./components/ToggleAccordeon/ToggleAccordeon.svelte";
+
+let tabElements = ["Naruto", "Tanjiro", "Luffy", "Asta"];
+    let tabData = [];
 </script>
 
 <div class="header">
@@ -39,6 +44,75 @@
 			</li>
 		</legend>
 	</section>
+
+	<section class="m-top">
+		<h2>Alert Message</h2>
+		<hr />
+        <div class="alertmessage">
+		    <AlertMessage />
+        </div>
+        <div class="alertmessage">
+		    <AlertMessage typeAlert='info' />
+        </div>
+        <div class="alertmessage">
+            <AlertMessage typeAlert='danger' />
+
+        </div>
+        <div class="alertmessage">
+            <AlertMessage typeAlert='success' />
+
+        </div>
+        <div class="alertmessage">
+            <AlertMessage typeAlert='pink' />
+
+        </div>
+		<AlertMessage typeAlert='beige' />
+
+
+		<legend>
+
+		</legend>
+	</section>
+
+	<section class="m-top">
+		<h2>Credit Card</h2>
+		<hr />
+        <CreditCard />
+
+		<legend>
+
+		</legend>
+	</section>
+<!-- 
+	<section class="m-top">
+		<h2>Checkbox</h2>
+		<hr />
+        <div class="checkboxxx">
+
+        <div class='boxxx'>
+        <Checkbox 
+    styleType = 'radio'
+    data = {tabData}
+    elements = {tabElements}
+    style = ''
+></Checkbox>
+</div>
+<div class='boxxx'>
+
+        <Checkbox 
+    styleType = 'checkbox'
+    data = {tabData}
+    elements = {tabElements}
+    style = 'primary'
+></Checkbox>
+</div>
+</div>
+
+
+		<legend>
+
+		</legend>
+	</section> -->
 
 	<section class="m-top">
 		<h2>Switch</h2>
@@ -89,17 +163,6 @@
 	</section>
 
 	<section class="m-top">
-		<h2>Omelette</h2>
-		<hr />
-
-		<Omelette />
-
-		<legend>
-			<h3>Properties :</h3>
-		</legend>
-	</section>
-
-	<section class="m-top">
 		<h2>Loader</h2>
 		<hr />
 		<Loader isLoading />
@@ -108,40 +171,32 @@
 			<h3>Properties :</h3>
 		</legend>
 	</section>
-	<!-- ! ici composant s'affiche pas -->
-	<section class="m-top">
-		<h2>Modal</h2>
-		<hr />
-		<Modal />
-
-		<legend>
-			<h3>Properties :</h3>
-		</legend>
-	</section>
 
 	<section class="m-top">
-		<h2>PopUp</h2>
+		<h2>Dropdown</h2>
 		<hr />
-		<PopUp />
+		<ToggleAccordeon />
 
-		<legend>
-			<h3>Properties :</h3>
-		</legend>
 	</section>
-	<!-- ! doesn't work -->
-	<!-- ? En ajoutant un de valeurs indiqués dans prop, il y a pas d'affichage ? -->
-	<section class="m-top">
-		<h2>Checkbox</h2>
-		<hr />
-		<Checkbox />
 
-		<legend>
-			<h3>Properties :</h3>
-		</legend>
-	</section>
 </div>
 
 <style>
+
+.boxxx {
+    margin: 0 100px;
+}
+
+
+.checkboxxx {
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    width: 500px;
+}
+    .alertmessage {
+        margin: 15px 0;
+    }
     .header {
         display: flex;
         align-items: center;

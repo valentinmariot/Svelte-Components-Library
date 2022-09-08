@@ -4,7 +4,7 @@
 	import Icon from "./Icon.svelte";
 
 	export let open = false;
-	export let iconMenu = "ico-apple";
+	export let iconMenu = "ico-settings";
 
 	export let onClick = (e) => {
 		open = !open;
@@ -49,10 +49,12 @@
 </header>
 
 <style>
-	#test {
+	/* #test {
 		margin-top: 30px;
 		padding: 10px 15px;
-	}
+		width: 300px;
+		box-shadow: 0 5px 15px -10px rgb(31 18 53 / 60%);
+	} */
 	.item {
 		margin-left: 20px;
 	}
@@ -116,6 +118,10 @@
 		margin-top: 15px;
 		border-radius: 10px;
 		overflow: hidden;
+		margin-top: 30px;
+		padding: 10px 15px;
+		width: 300px;
+		box-shadow: 0 5px 15px -10px rgb(31 18 53 / 60%);
 	}
 
 	.disable-link {

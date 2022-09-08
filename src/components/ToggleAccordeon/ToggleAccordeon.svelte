@@ -10,7 +10,7 @@
 <body>
   <div class="accordion-body">
     <div class="accordion">
-      <div class="container"
+      <div class="container mbottom"
       class:active="{show[1] === true}"
       on:click="{() => show[1] = !show[1]}"> 
         <div class="label">Toggle 1</div>
@@ -114,5 +114,9 @@
     border-style: solid;
     /* coin en haut à gauche | coin en haut à droite | coin en bas à droite | coin en bas à gauche*/
     border-radius: 0px 0px 6px 6px;
+  }
+
+  .mbottom {
+    margin-bottom: 0;
   }
 </style>
