@@ -1,5 +1,5 @@
 import './app.css'
-import App from './credit-card.svelte'
+import App from './APP.svelte'
 
 const app = new App({
   target: document.getElementById('app')
