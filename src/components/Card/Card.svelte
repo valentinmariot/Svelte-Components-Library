@@ -61,8 +61,21 @@ const maxCard = () => {
           <span on:click={maxCard}></span>
         </div>
       </div>
+<<<<<<< HEAD
       <div  class="image-area"> 
         <img class="card-img-top" src="https://static1.purepeople.com/articles/5/11/54/35/@/1051093-beyonce-knowles-attending-the-hbo-624x600-2.jpg" alt="Card image" style="width:50%">
+=======
+      <div  class="container-image-area"> 
+        <div class="image-area">
+          <img class="card-img-top" src="./src/components/Card/PhotoHomme.png" alt="Card image" style="width:50%">
+
+           <img class="egg-logo" src="./src/components/Card/oeuf-smile.svg" alt="Card image" >
+          
+          <!--
+          <img class="card-img-top" src="/Users/paolacyp/Desktop/GroupeProjet/Svelte-Components-Library/src/components/Card/oeuf-smile.svg" alt="Card image" style="width:50%"> -->
+
+        </div>
+>>>>>>> 7fea6cf (card done)
       </div>
       <div class="title-area"> 
         <h4 class="card-title">{title}</h4>
@@ -97,6 +110,10 @@ const maxCard = () => {
 
 
 <style>
+
+.big-conatiner-card {
+  font-size: 'Roboto';
+}
 
 
 .card {
@@ -162,14 +179,31 @@ const maxCard = () => {
   border-top: 3px solid rgba(0, 24, 88, 1) ;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
-.image-area img {
+
+
+.image-area img:nth-child(1) {
+  background-color: antiquewhite;
   margin-top: 1em;
   border: 3px solid rgba(0, 24, 88, 1) ;
   border-radius: 3px;
 
 }
+
+.image-area img:nth-child(2) {
+  margin-top: 0.5em;
+  position: absolute;
+  top : 8 ;
+  right: 160;
+  margin-left: 160px;
+
+}
+
+/* .egg-logo  {
+  background-color: #82c5f5;
+} */
 
 /* -- TITRE */
 
@@ -178,9 +212,9 @@ h4 {
   padding: 1em 0;
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 23.44px;
   color : rgba(0, 24, 88, 1) ;
   text-align: center;
 }
@@ -205,16 +239,14 @@ h4 {
 
 .card-body p{
   text-align: justify;
-}
-
-
-
-.card-body p {
+  font-weight: 400;
+  font-size: 16px;
   margin-top: 0;
   margin-left: 20px;
   margin-right: 20px;
 }
 
+<<<<<<< HEAD
 
 .icons-area {
   /* background-color: #F582AE; */
@@ -222,6 +254,8 @@ h4 {
 
 }
 
+=======
+>>>>>>> 7fea6cf (card done)
 .icons-area ul {
   /* background-color: #bf0b50; */
   width: 100%;
