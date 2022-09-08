@@ -1,72 +1,65 @@
 <script>
     export let open = false
+    export let iconMenu = undefined
     export let onClick = ()=> {
       open = !open
     }
   
     export let ariaLabel = 'toggle menu'
-    export let width = 80
   </script>
   
   <button on:click={onClick} aria-expanded={open} aria-label={ariaLabel}>
-    <svg
-      class:open
-      viewBox="0 0 100 100"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="5"
-      {width}
-    >
-      <path
-        class="top"
-        d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
-      />
-      <path class="middle" d="m 30,50 h 40" />
-      <path
-        class="bottom"
-        d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
-      />
-    </svg>
+    <span class:iconMenu class={iconMenu} ></span>
+    <svg class:open class="icon icon-chevron"><use xlink:href="#icon-chevron-up"></use></svg>
+    <symbol id="icon-chevron-up" viewBox="0 0 24 24">
+      <path d="M18.707 14.293l-6-6c-0.391-0.391-1.024-0.391-1.414 0l-6 6c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path>
+    </symbol>
   </button>
+
+
   
   <style>
+
+    .iconMenu {
+      font-size: 20px;
+    }
+    .icon {
+      display: inline-block;
+      color: #ffffff;
+      width: 1em;
+      height: 1em;
+      fill: currentColor;
+      font-size: 48px;
+    }
+    
+    .icon-chevron{
+      transform: rotate(0deg);  
+    }
+    
     :root {
       --transition-duration: 400ms;
     }
-  
+    
     button {
+      position: relative;
+      z-index: 1;
+      background-color: black;
+      color: white;
       cursor: pointer;
       display: flex;
       align-items: center;
       overflow: hidden;
+      border: unset;
+      border-radius: 10px;
     }
-  
-  
-    .top {
-      stroke-dasharray: 40 160;
-   
-    }
-  
-    .middle {
-      transform-origin: 50%;
-
-    }
-  
-    .bottom {
-      stroke-dasharray: 40 85;
-   
-    }
-  
+    
+    
     .open{
-        transform: rotate(45deg);
+      transform: rotate(180deg); 
     }
- 
-    .open .top,
-    .open .bottom {
-      stroke-dashoffset: -64px;
-    } 
   
-     .open .middle {
+     .open .icon{
       transform: rotate(90deg); 
+      margin-top: 1px;
     } 
   </style>

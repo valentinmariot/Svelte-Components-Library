@@ -3,7 +3,7 @@
      
 </script>
   <div class="container">
-       <Menu isLeft={false} />
+       <Menu isRight={false} />
 
   </div>
 

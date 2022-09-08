@@ -6,7 +6,7 @@
   // allow to link label to toggle
   export let id = 'button'
   // function to export boolean's value
-  export let onToggle
+  export let onToggle = undefined
   // allow to disable button
   export let isDisabled = false
   // allow to change style

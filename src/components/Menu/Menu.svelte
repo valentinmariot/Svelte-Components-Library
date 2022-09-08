@@ -1,46 +1,78 @@
 <script>
-  import { fly } from 'svelte/transition'
+  import { fade } from 'svelte/transition';
 
-  import BurgerMenu from './BurgerMenu.svelte'
+  import Icon from './BurgerMenu.svelte'
 
   export let open = false
-  export let onClick = () => {
+  export let iconMenu = 'ico-apple'
+ 
+  
+
+  export let onClick = (e) => {
     open = !open
   }
-  export let isLeft = undefined
-  export let items = ['item 1','item 2', 'item 3']
+
+
+  export let isRight = undefined
+  export let items = [{value:'item 1', href:'href1', icon:'ico-house'}, {value:'item 2', href:'href2', icon:'ico-location'}, {value:'item 3', icon:'ico-apple', isDisabled:true}]
+
+  // export let items2 = [{value:'item 1', icon:'ico-apple'}, {value:'item 2', icon:'ico-apple'}, {value:'item 3', icon:'ico-apple'}]
+
 </script>
 
-<header class={isLeft ? 'isLeft' : ''} >
-  <div class="main">
+<header class={isRight ? "isRight"  : ""} >
+  <div class="main"> 
     <div class="logo">
     
     </div>
-    <BurgerMenu {open} {onClick} />
+    <Icon {open} {onClick} iconMenu={iconMenu} />
   </div>
 
   {#if open}
-    <nav>
-      {#each items as item}
-      <!-- <a href="">Videos</a>
-      <a href="">Blogposts</a>
-      <a href="">Guides</a>
-      <a href="">Portfolio</a>
-      <a href="">Milestones</a> -->
-        <a  >{item}</a>
+  <div transition:fade>
+  <div  class="triangle {isRight ? 'by-left':''}"></div>
+  <nav class="{isRight ? 'by-left-nav':''}">
+    {#each items as item}
+        <a on:click={onClick.bind(null, item.value) } href={item.href ? item.href : '#'} class={item.isDisabled ? "disable-link" : ""} disabled='{item.isDisabled}' >
+          <div class='link-container'>
+            <span class={item.icon}></span>
+            <div class="item">{item.value}</div>
+        </div>
+        </a>
       {/each}
     </nav>
+  </div>
   {/if}
 </header>
 
 <style>
+
+  .item {
+    margin-left: 20px;
+  }
+
+  .link-container{
+    display: flex;
+    padding:5px;
+    /* justify-content: ; */
+  }
+  span{
+    display: flex;
+    align-items: center;
+    /* justify-content: left; */
+  }
+
   header {
     position: relative;
     font-size: 2rem;
     z-index: 2;
     /* display: flex; */
   }
-  header.isLeft {
+
+  .pos-relative {
+    position: absolute;
+  }
+  header.isRight {
     display: flex;
   }
 
@@ -52,9 +84,11 @@
   a {
     width: 100%;
    cursor: pointer; 
+   color: whitesmoke;
+
   }
   a:hover{
-    background: pink;
+    background: rgb(167, 161, 162);
   }
   a:active{
 
@@ -68,15 +102,47 @@
 
 
   nav {
-    text-align: center;
-    background-color: grey;
     position: absolute;
-    z-index: -1;
+    text-align: center;
+    background-color: black;
+    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
-    top: 86px;
     width:100%;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
   }
+  
+  .disable-link {
+    pointer-events: none;
+    opacity: 30%;
+  }
+  
+  .triangle {
+    position: relative;
+    float: right;
+    margin-right: 40px;
+    margin-top: 5px;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 10px;
+    border-left-width: 10px;
+    border-bottom: 10px solid #000;
+  }
+  
+  .by-left {
+    /* top && left by isRight prop */
+    top: 50px;
+    left: -58px;
+  }
+  .by-left-nav {
+    /* top by isRight */
+    top: 50px; 
+    left: 0px;
+  }
+
 </style>
