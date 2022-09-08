@@ -1,6 +1,7 @@
 <script>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	import PasswordChecker from "./components/PasswordChecker/Password-checker.svelte";
 	import SwitchSection from "./components/Switch/SwitchSection.svelte";
 	import ToolbarSection from "./components/Toolbar/ToolbarSection.svelte";
@@ -163,28 +164,25 @@
     import Slider2 from "./Slider/Slider2.svelte" ;
 
 >>>>>>> 2a17bd5 (simple input range)
+=======
+    import Slider from "./Slider/Slider.svelte" ;
+   
+>>>>>>> 2ceb56d (clean Slider)
 </script>
 
 
-<!-- <Slider 
-defaultValue = {10}
-idInput="Lozange"
-nameInput="volume"
-forData="volume"
+<Slider 
+    idInput="premier-input"
+    nameInput="volume"
+    styleType="primary"
+    defaultValue = {0}
+    min={0}
+    max={100}
 
-min={0}
-max={100}
-/> -->
-
-
-
-<Slider2 
-defaultValue = {10}
-idInput="Lozange"
-nameInput="volume"
-
-min={0}
-max={100}
 />
 
+<<<<<<< HEAD
 >>>>>>> 7932310 (slider with test css)
+=======
+
+>>>>>>> 2ceb56d (clean Slider)
