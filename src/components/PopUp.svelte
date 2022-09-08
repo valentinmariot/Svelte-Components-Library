@@ -9,7 +9,7 @@
   <div class="container">
     <button class= 'firstButton' on:click={() => modal.show()}>Deleted count</button>
   </div>
-  
+
   <Modal bind:this={modal}> 
     <h2>{title}</h2>
     <p>{text}</p>
@@ -19,7 +19,7 @@
     <div class="container-btn">
         <div class="btn-holder">
             <button on:click={() => modal.hide()}>Yes, deleted it</button>
-            <button class="{current === 'cancel' ? 'selected' : ''}" on:click="{() => modal.hide()}"> Cancel </button>    
+            <button on:click={() => modal.hide()}>Cancel</button>
         </div>
     </div>
    
