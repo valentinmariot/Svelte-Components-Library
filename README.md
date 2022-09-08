@@ -7,4 +7,4 @@ Inspired from <a href="https://www.mackenziechild.me/" style="color: #8bd3dd">Ma
 ```npm run dev```    
 
 ## QUICK VIEW   
-<img src="./src/assets/FIGMA.png" height="1045px"/>
+<img src="./src/assets/FIGMA.png" width="1045px"/>
