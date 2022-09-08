@@ -44,7 +44,7 @@
 </script>
 
 {#if (open)}
-    <div class="container" style="color: {textColor}; background: {backgroundColor};">
+    <div class="alertmessagecontainer" style="color: {textColor}; background: {backgroundColor};">
         <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         <span class="ico-close icon" style="color: {textColor}; background: {backgroundColor};" on:click={() => hide()}/>
     </div>
@@ -52,7 +52,7 @@
 
 <style>
 
-    .container {
+    .alertmessagecontainer {
         display: flex;
         border-radius: 5px;
     }

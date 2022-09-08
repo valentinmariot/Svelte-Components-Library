@@ -215,13 +215,6 @@ let tabElements = ["Naruto", "Tanjiro", "Luffy", "Asta"];
 		</legend>
 	</section>
 
-	<section class="m-top">
-		<h2>Dropdown</h2>
-		<hr />
-		<ToggleAccordeon />
-
-	</section>
-
 </div>
 
 <style>
