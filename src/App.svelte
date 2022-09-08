@@ -1,4 +1,5 @@
 <script>
+	import PasswordChecker from "./components/PasswordChecker/Password-checker.svelte";
 	import SwitchSection from "./components/Switch/SwitchSection.svelte";
 	import ToolbarSection from "./components/Toolbar/ToolbarSection.svelte";
 </script>
@@ -27,6 +28,15 @@
 			<SwitchSection />
 		</div>
 		<legend />
+	</section>
+	<section>
+		<PasswordChecker
+			lenght_characters={10}
+			uppercase={true}
+			special_charact={true}
+			number={true}
+			face={true}
+		/>
 	</section>
 </div>
 
