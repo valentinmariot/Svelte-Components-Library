@@ -2,18 +2,17 @@
     import Modal from "./Modal.svelte";
     let modal;
     let current = 'cancel';
+    export let title;
+    export let text;
 </script>
 
   <div class="container">
     <button class= 'firstButton' on:click={() => modal.show()}>Deleted count</button>
   </div>
-  <Modal bind:this={modal}>
-    <h2>Modal title</h2>
-    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
-    </p>
+  
+  <Modal bind:this={modal}> 
+    <h2>{title}</h2>
+    <p>{text}</p>
     <div class="proposition">
         <p>Are you sure ?</p>
     </div>
