@@ -9,6 +9,12 @@
 	import Checkbox from "./components/Checkbox/Checkbox.svelte";
 </script>
 
+<div class="header">
+    <img src="./src/assets/OMELETTE.png" alt="logo" width="150px" />
+    <h1>SVELTE COMPONENTS LIBRARY</h1>
+    <h2 id="hhfp">-An Happy Hues fans project-</h2>
+</div>
+
 <div class="container">
 	<h1>Omelette Library</h1>
 	<p />
@@ -136,6 +142,16 @@
 </div>
 
 <style>
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #hhfp{
+        color: #f582ae;
+    }
 	.container {
 		width: 500px;
 	}
