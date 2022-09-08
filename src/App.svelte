@@ -10,6 +10,12 @@
 	import Slider from "./components/Slider/Slider.svelte";
 	import Section from "./components/Section/Section.svelte";
 
+	import Omelette from "./components/Omelette/Omelette.svelte";
+
+	import Card from "./components/Card/Card.svelte";
+	import AlertMessage from "./components/AlertMEssage/AlertMessage.svelte";
+	import CreditCard from "./components/CreditCard/CreditCard.svelte";
+
 	import {
 		toolbarProps,
 		switchProps,
@@ -20,11 +26,17 @@
 		checkboxProps,
 		sliderProps,
 	} from "./config/properties";
+
+	let tabElements = ["Naruto", "Tanjiro", "Luffy", "Asta"];
+	let tabData = [];
 </script>
 
+<div class="header">
+	<img src="./src/assets/OMELETTE.png" alt="logo" width="150px" />
+	<h1>SVELTE COMPONENTS LIBRARY</h1>
+	<h2 id="hhfp">-An Happy Hues fans project-</h2>
+</div>
 <div class="container">
-	<h1>Omelette Library</h1>
-
 	<Section title={"Toolbar"} props={toolbarProps}>
 		<Toolbar isRight />
 	</Section>
@@ -58,12 +70,43 @@
 	</Section>
 
 	<!-- ! ici composant s'affiche pas -->
-	<Section title="Modal" props={modalProps}>
+	<Section title="Modal" props={""}>
 		<Modal />
 	</Section>
 
-	<Section title="Slider" props={sliderProps ? sliderProps : ""}>
-		<Slider />
+	<Section title="CreditCard" props={""}>
+		<CreditCard />
+	</Section>
+
+	<Section title="Slider" props={""}>
+		<div class="thefameuxslider">
+			<Slider min="0" max="100" defaultValue="0" />
+		</div>
+	</Section>
+
+	<Section title="Card" props={""}>
+		<Card
+			title=" Mackenzie Child"
+			shortDescription="Some Lorem Ipsum Bacon Vegan here"
+			longDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+		/>
+	</Section>
+
+	<Section title="AlerMessage" props={""}>
+		<AlertMessage />
+		<AlertMessage typeAlert="info" />
+		<AlertMessage typeAlert="danger" />
+		<AlertMessage typeAlert="success" />
+		<AlertMessage typeAlert="pink" />
+		<AlertMessage typeAlert="beige" />
+	</Section>
+	<Section title="Checkbox" props={""}>
+		<Checkbox
+			styleType="checkbox"
+			data={tabData}
+			elements={tabElements}
+			style="primary"
+		/>
 	</Section>
 </div>
 

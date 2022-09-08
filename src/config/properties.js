@@ -46,35 +46,35 @@ export const passwordProps = [
 
 export const loadingProps = [
     {
-        title: "???",
-        description: "???",
+        title: "",
+        description: "",
     },
 ];
 
 export const modalProps = [
     {
-        title: "??",
-        description: "???",
+        title: "",
+        description: "",
     },
 ];
 
 export const popupProps = [
     {
-        title: "??",
-        description: "???",
+        title: "",
+        description: "",
     },
 ];
 
 export const checkboxProps = [
     {
-        title: "??",
-        description: "???",
+        title: "",
+        description: "",
     },
 ];
 
 export const sliderProps = [
     {
-        title: "??",
-        description: "???",
+        title: "",
+        description: "",
     },
 ];

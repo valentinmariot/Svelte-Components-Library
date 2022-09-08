@@ -22,8 +22,7 @@
 					{/each}
 				</ul>
 			{:else}
-				<span>enter an array of objects with keys title and description</span
-				>{/if}
+				<span />{/if}
 		</legend>
 	</section>
 </div>
