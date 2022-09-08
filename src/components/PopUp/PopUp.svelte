@@ -1,7 +1,6 @@
 <script>
-    import Modal from "./Modal.svelte";
+    import Modal from "../Modal/Modal.svelte";
     let modal;
-    let current = 'cancel';
     export let title;
     export let text;
 </script>
