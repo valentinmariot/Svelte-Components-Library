@@ -1,4 +1,3 @@
-<!-- <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
 <script>
 	import SwitchSection from "./components/Switch/SwitchSection.svelte";
 	import ToolbarSection from "./components/Toolbar/ToolbarSection.svelte";
