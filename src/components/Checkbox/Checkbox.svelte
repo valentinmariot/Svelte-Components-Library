@@ -14,14 +14,14 @@
 				<span class="checkmark" />
 			</label>
 			{#if style == "primary"}
-				<style>
+				<!-- <style>
 					body {
 						display: flex;
 						justify-content: center;
 						align-items: center;
 						height: 100vh;
 					}
-					.container {
+					/* .container {
 						display: block;
 						position: relative;
 						padding-left: 35px;
@@ -33,7 +33,7 @@
 						-ms-user-select: none;
 						user-select: none;
 						font-family: "Roboto", sans-serif;
-					}
+					} */
 
 					/* Hide the browser's default checkbox */
 					.container input {
@@ -94,16 +94,16 @@
 						width: 20;
 						height: 20;
 					}
-				</style>
+				</style> -->
 			{:else if style == "secondary"}
-				<style>
+				<!-- <style>
 					body {
 						display: flex;
 						justify-content: center;
 						align-items: center;
 						height: 100vh;
 					}
-					.container {
+					/* .container {
 						display: block;
 						position: relative;
 						padding-left: 35px;
@@ -115,7 +115,7 @@
 						-ms-user-select: none;
 						user-select: none;
 						font-family: "Roboto", sans-serif;
-					}
+					} */
 
 					/* Hide the browser's default checkbox */
 					.container input {
@@ -176,16 +176,16 @@
 						width: 20;
 						height: 20;
 					}
-				</style>
+				</style> -->
 			{:else}
-				<style>
+				<!-- <style>
 					body {
 						display: flex;
 						justify-content: center;
 						align-items: center;
 						height: 100vh;
 					}
-					.container {
+					/* .container {
 						display: block;
 						position: relative;
 						padding-left: 35px;
@@ -197,16 +197,16 @@
 						-ms-user-select: none;
 						user-select: none;
 						font-family: "Roboto", sans-serif;
-					}
+					} */
 
 					/* Hide the browser's default checkbox */
-					.container input {
+					/* .container input {
 						position: absolute;
 						opacity: 0;
 						cursor: pointer;
 						height: 0;
 						width: 0;
-					}
+					} */
 
 					/* Create a custom checkbox */
 					.checkmark {
@@ -244,22 +244,22 @@
 
 					/* Style the checkmark/indicator */
 					.container .checkmark:after {
-						left: 9px;
+						/* left: 9px;
 						top: 5px;
 						width: 5px;
-						height: 10px;
+						height: 10px; */
 						/* couleur du check */
-						border: solid #fef6e4;
+						/* border: solid #fef6e4;
 						border-width: 0 3px 3px 0;
 						-webkit-transform: rotate(45deg);
 						-ms-transform: rotate(45deg);
-						transform: rotate(45deg);
+						transform: rotate(45deg); */
 					}
 					span.checkmark {
 						width: 20;
 						height: 20;
 					}
-				</style>
+				</style> -->
 			{/if}
 		{/each}
 	{:else if styleType == "radio"}
@@ -270,7 +270,7 @@
 				<span class="checkmarkButton" />
 			</label>
 			{#if style == "primary"}
-				<style>
+				<!-- <style>
 					body {
 						display: flex;
 						justify-content: center;
@@ -343,9 +343,9 @@
 						border-radius: 50%;
 						background: #172c66;
 					}
-				</style>
+				</style> -->
 			{:else if style == "secondary"}
-				<style>
+				<!-- <style>
 					body {
 						display: flex;
 						justify-content: center;
@@ -418,9 +418,9 @@
 						border-radius: 50%;
 						background: #fef6e4;
 					}
-				</style>
+				</style> -->
 			{:else}
-				<style>
+				<!-- <style>
 					body {
 						display: flex;
 						justify-content: center;
@@ -494,7 +494,7 @@
 						border-radius: 50%;
 						background: #fef6e4;
 					}
-				</style>
+				</style> -->
 			{/if}
 		{/each}
 	{:else}

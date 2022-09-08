@@ -11,9 +11,12 @@
 {#if open}
 	<div class="pop-up">
 		<div class="modal">
-			<span class="close" on:click={() => {
-				hide();
-			}}>&times;</span>
+			<span
+				class="close"
+				on:click={() => {
+					hide();
+				}}>&times;</span
+			>
 			<slot />
 		</div>
 	</div>
