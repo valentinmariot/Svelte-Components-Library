@@ -4,6 +4,9 @@
 	import ToolbarSection from "./components/Toolbar/ToolbarSection.svelte";
 	import Omelette from "./components/Omelette/Omelette.svelte";
 	import Loader from "./components/Loader/Loader.svelte";
+	import Modal from "./components/Modal/Modal.svelte";
+	import PopUp from "./components/PopUp/PopUp.svelte";
+	import Checkbox from "./components/Checkbox/Checkbox.svelte";
 </script>
 
 <div class="container">
@@ -89,10 +92,42 @@
 			<h3>Properties :</h3>
 		</legend>
 	</section>
+
 	<section class="m-top">
 		<h2>Loader</h2>
 		<hr />
 		<Loader isLoading />
+
+		<legend>
+			<h3>Properties :</h3>
+		</legend>
+	</section>
+	<!-- ! ici composant s'affiche pas -->
+	<section class="m-top">
+		<h2>Modal</h2>
+		<hr />
+		<Modal />
+
+		<legend>
+			<h3>Properties :</h3>
+		</legend>
+	</section>
+
+	<section class="m-top">
+		<h2>PopUp</h2>
+		<hr />
+		<PopUp />
+
+		<legend>
+			<h3>Properties :</h3>
+		</legend>
+	</section>
+	<!-- ! doesn't work -->
+	<!-- ? En ajoutant un de valeurs indiqués dans prop, il y a pas d'affichage ? -->
+	<section class="m-top">
+		<h2>Checkbox</h2>
+		<hr />
+		<Checkbox />
 
 		<legend>
 			<h3>Properties :</h3>
