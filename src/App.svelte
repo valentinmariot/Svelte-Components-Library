@@ -1,7 +1,4 @@
 <script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	import PasswordChecker from "./components/PasswordChecker/Password-checker.svelte";
 	import SwitchSection from "./components/Switch/SwitchSection.svelte";
 	import ToolbarSection from "./components/Toolbar/ToolbarSection.svelte";
@@ -156,33 +153,3 @@
 		text-decoration: underline;
 	}
 </style>
-=======
-    import Slider from "./Slider/Slider.svelte" ;
-  
-=======
-    // import Slider from "./Slider/Slider.svelte" ;
-    import Slider2 from "./Slider/Slider2.svelte" ;
-
->>>>>>> 2a17bd5 (simple input range)
-=======
-    import Slider from "./Slider/Slider.svelte" ;
-   
->>>>>>> 2ceb56d (clean Slider)
-</script>
-
-
-<Slider 
-    idInput="premier-input"
-    nameInput="volume"
-    styleType="primary"
-    defaultValue = {0}
-    min={0}
-    max={100}
-
-/>
-
-<<<<<<< HEAD
->>>>>>> 7932310 (slider with test css)
-=======
-
->>>>>>> 2ceb56d (clean Slider)
