@@ -6,5 +6,6 @@ Inspired from <a href="https://www.mackenziechild.me/" style="color: #8bd3dd">Ma
 ## RUN PROJECT      
 ```npm run dev```    
 
-## QUICK VIEW   
+## QUICK VIEW     
+### <a href="https://www.figma.com/file/6yt6YDCaIwHfBLfMR08NYE/Svelte-Components-Library?node-id=185%3A2">-> Go to Figma's project</a>     
 <img src="./src/assets/FIGMA.png" width="1045px"/>
