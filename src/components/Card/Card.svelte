@@ -3,7 +3,11 @@
 export let title ;
 export let shortDescription ;
 export let longDescription ;
+<<<<<<< HEAD
 export let listIcons ;
+=======
+export let imgSrc ;
+>>>>>>> d2e2561 (props img added)
 let isClosed = true ;
 let isMin = true; 
 let isMax = false ; 
@@ -67,13 +71,9 @@ const maxCard = () => {
 =======
       <div  class="container-image-area"> 
         <div class="image-area">
-          <img class="card-img-top" src="./src/components/Card/PhotoHomme.png" alt="Card image" style="width:50%">
-
-           <img class="egg-logo" src="./src/components/Card/oeuf-smile.svg" alt="Card image" >
+          <img class="card-img-top" src="./src/components/Card/PhotoHomme.png" alt="Card" style="width:50%">
+           <img class="egg-logo" src={imgSrc} alt="logo" >
           
-          <!--
-          <img class="card-img-top" src="/Users/paolacyp/Desktop/GroupeProjet/Svelte-Components-Library/src/components/Card/oeuf-smile.svg" alt="Card image" style="width:50%"> -->
-
         </div>
 >>>>>>> 7fea6cf (card done)
       </div>
@@ -92,9 +92,15 @@ const maxCard = () => {
           {#if isShortCard || isMax}
             <div class="all-social-icons">
               <ul>
+<<<<<<< HEAD
                 <li> <a href="https://twitter.com/"> {listIcons[0]}</a></li>
                 <li> <a href="https://fr-fr.facebook.com/"> {listIcons[1]}</li>
                 <li> <a href="https://www.instagram.com/?hl=fr"> {listIcons[2]}</a>
+=======
+                <li> <a href="https://twitter.com/" class="ico-twitter"> </a></li>
+                <li> <a href="https://fr.linkedin.com/" class="ico-linkedin"> </a>
+
+>>>>>>> d2e2561 (props img added)
                 </li>
               </ul>
             </div>
