@@ -1,9 +1,44 @@
 <script>
-    import PopUp from "./components/PopUp.svelte";
-    let titleModal = "Title"
-    let textModal = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+	import SwitchSection from "./components/Switch/SwitchSection.svelte";
+	import ToolbarSection from "./components/Toolbar/ToolbarSection.svelte";
 </script>
-<PopUp
-    title = {titleModal}
-    text = {textModal}
-></PopUp>
+
+<div class="container">
+	<section class="m-top">
+		<h2>Menu</h2>
+		<hr />
+
+		<ToolbarSection />
+
+		<legend>
+			<h4>Properties :</h4>
+			<ul>
+				- <strong>isRight</strong> : place toolbar to the right side by default is
+				placed to the left side
+			</ul>
+		</legend>
+	</section>
+
+	<section class="m-top">
+		<h2>Switch</h2>
+		<hr />
+
+		<div class="container m-top">
+			<SwitchSection />
+		</div>
+		<legend />
+	</section>
+</div>
+
+<style>
+	.container {
+		width: 500px;
+	}
+
+	.m-top {
+		margin-top: 50px;
+	}
+	legend {
+		margin-top: 92px;
+	}
+</style>
